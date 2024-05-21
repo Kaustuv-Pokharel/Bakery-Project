@@ -36,8 +36,7 @@ def access():
         for n in df.index:
             if df.loc[n, 'order id'] == id_number:
                 print(df.loc[n])
-            else:
-                n = n + 1
+     
     if id_number not in new_df:
         print("No order with the id", id_number,"found!")
 
@@ -51,8 +50,7 @@ def delete():
                 index=n
                 df.drop(index,inplace=True)
                 df.to_excel('BakeryProject.xlsx', index=False)
-            else:
-                n=n+1
+
             
 
     if id_number not in new_df:
