@@ -51,6 +51,9 @@ def delete():
                 index=n
                 df.drop(index,inplace=True)
                 df.to_excel('BakeryProject.xlsx', index=False)
+            else:
+                n=n+1
+            
 
     if id_number not in new_df:
         print(f"No data with order id {id_number} found!")
